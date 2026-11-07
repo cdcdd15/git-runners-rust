@@ -84,11 +84,28 @@
 - Added [foundations for P0–P5](docs/concepts/foundations.md) and linked the concept guides from the phase plans. Updated the study order so learners encounter definitions and diagrams before exercises.
 - Checked concepts against official GitLab, Cargo and PowerShell references. Verified Markdown links, fenced examples, phase status and whitespace locally. Windows setup and runtime verification remain deferred.
 
+## P0.A · Knowledge complete
+
+- Added the [GitLab job lifecycle chapter](docs/concepts/job-lifecycle.md) with component and sequence diagrams, alternate paths, configuration ownership and worked knowledge checks.
+- Compared job execution, long polling, credentials and finalization against GitLab documentation. Checked Markdown links, diagram fences and chapter structure offline. The revised roadmap tracks P0.B and P0.C separately.
+
+The P0 knowledge material is organized in three chapters under [P0 architecture](docs/concepts/job-lifecycle.md). The chapter index preserves existing links from the roadmap, reference and exercises.
+
+## P0.B · Reference complete
+
+- Added the [GitLab job trace reference](docs/references/job-trace-reference.md) with complete illustrative YAML, push and MR records, a stage-by-stage trace and a comparison of failure boundaries.
+- Checked workflow and dependency semantics against official GitLab documentation. Verified YAML structure, producer references, trace consistency and Markdown links locally. GitLab CI Lint and runtime verification remain deferred.
+
+## P0.C · Education complete
+
+- Added the [P0 scoring crosswalk](docs/roadmap/P0.md#p0-scoring-crosswalk) and retained both trace exercises. Added focused prompts for a scoped workflow change and an evidence-based artifact diagnosis.
+- Walked through the fixtures and compared the expected answers with the lifecycle chapter, trace reference and shared rubric. Verified links, the example YAML and status in both roadmap tables. This milestone establishes assessment readiness. Runtime verification remains deferred.
+
 ## Phase status
 
 | Phase | Documentation | Implementation | Runtime verification |
 |---|---|---|---|
-| P0 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
+| P0 | EDUCATION COMPLETE | DEFERRED | DEFERRED |
 | P1 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P2 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P3 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
@@ -97,4 +114,4 @@
 | P6 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P7–P13 | PLANNED | DEFERRED | DEFERRED |
 
-Next step is [P7.1](docs/roadmap/P7.md), reading a source GitHub Actions workflow for migration.
+Next step is [P1.A](docs/roadmap/P1.md#p1a--develop-the-knowledge-base-chapter), the Rust language Knowledge Base chapter. The P1–P6 rows record the original documentation milestones.

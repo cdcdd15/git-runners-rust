@@ -1,6 +1,6 @@
 # P0.1 · Annotate a GitLab job trace
 
-**Access** — Local. Allow 25–35 minutes. Use a Markdown viewer or text editor and the [execution diagrams](../architecture/README.md).
+**Access** — Local. Allow 25–35 minutes. Read the [lifecycle chapter](../concepts/job-lifecycle.md) and [trace reference](../references/job-trace-reference.md) before annotating the fixture.
 
 The fixture is a simulation of a successful job on a Windows Shell runner using PowerShell Core. Line numbers and messages are instructional. Real trace headings vary by runner version and job configuration.
 
@@ -57,4 +57,4 @@ GitLab evaluated configuration and queued the job before line 01. A runner reque
 
 ## Acceptance
 
-Correctly place checkout, cache restore, artifact download, main script, cache and artifact upload, and cleanup. Explain the difference between pending and checkout failure, and identify what proves the summary was published. The table above records the observed ordering in the simulated fixture. Live trace verification belongs to [P0.2](../roadmap/P0.md#p02--trace-a-sandbox-job).
+Correctly place checkout, cache restore, artifact download, main script, cache and artifact upload, and cleanup. Explain the difference between pending and checkout failure, and identify what proves the summary was published. The table above records the observed ordering in the simulated fixture. Use the [P0 scoring crosswalk](../roadmap/P0.md#p0-scoring-crosswalk) for offline validation. Live trace verification is tracked in [Future labs](../../FUTURE-LABS.md).

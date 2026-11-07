@@ -42,11 +42,11 @@ L3 is required initially for GitLab lifecycle and configuration, variables, cach
 
 ## Phase dependencies and study effort
 
-Hours are provisional learner study estimates. Status indicates progress toward the educational criteria below. See the [historical phase status](CURRENT-STATE.md#phase-status) for prior milestones. ⬜ To do · 🟡 In progress · ✅ Education complete
+Hours are provisional learner study estimates. Status shows overall phase progress and any completed layer milestone. See the [historical phase status](CURRENT-STATE.md#phase-status) for prior milestones. ⬜ To do · 🟡 In progress · ✅ Education complete
 
 | Phase | Status | Prerequisites | Hours | Exercise mode |
 |---|:---:|---|---:|---|
-| [P0 · GitLab execution lifecycle](docs/roadmap/P0.md) | 🟡 | — | 2–3 | Offline |
+| [P0 · GitLab execution lifecycle](docs/roadmap/P0.md) | ✅ **Education complete** | — | 2–3 | Offline |
 | [P1 · Rust for Java developers](docs/roadmap/P1.md) | 🟡 | P0 | 5–7 | Offline |
 | [P2 · Cargo builds and dependency management](docs/roadmap/P2.md) | 🟡 | P1 | 4–6 | Offline |
 | [P3 · GitLab CI YAML from zero](docs/roadmap/P3.md) | 🟡 | P0 | 5–8 | Offline |
@@ -63,11 +63,11 @@ Hours are provisional learner study estimates. Status indicates progress toward 
 
 ## Documentation deliverable matrix
 
-Each phase has a defined roadmap and one planned Knowledge Base chapter and Practical Reference. The linked phase files specify paths, evidence, dependencies and acceptance criteria. Prioritize core GitLab and runner coverage, with scanner-specific references completed before integrated delivery.
+Each phase has a defined roadmap, a Knowledge Base chapter and a Practical Reference in scope. The phase specifications record which deliverables are planned or complete. The linked phase files specify paths, evidence, dependencies and acceptance criteria. Prioritize core GitLab and runner coverage, with scanner-specific references completed before integrated delivery.
 
 | Phase and subject | Knowledge Base | Practical Reference | Competency Validation | Target | Existing coverage | Missing work | Priority |
 |---|---|---|---|:---:|---|---|:---:|
-| [P0 · GitLab execution lifecycle](docs/roadmap/P0.md) | Complete lifecycle architecture and sequence | Annotated YAML and trace atlas | Retain P0.1/.2 and map to lifecycle and evidence | L3 | [Architecture](docs/architecture/README.md) and two trace labs | Expand request/assignment and conditional execution, and publish a trace-to-component reference. | High |
+| [P0 · GitLab execution lifecycle](docs/roadmap/P0.md) | Complete lifecycle architecture and sequence | Annotated YAML and trace atlas | Retain P0.1/.2 and map to lifecycle and evidence | L3 | [Job lifecycle chapter](docs/concepts/job-lifecycle.md), [architecture](docs/architecture/README.md), [trace reference](docs/references/job-trace-reference.md) and two scored trace labs | Educational layers complete. Live validation deferred. | High |
 | [P1 · Rust for Java developers](docs/roadmap/P1.md) | Ownership, modules, traits and typed errors | Annotated library/CLI and review diffs | Retain P1.1/.2 and score ownership and safe repair | L2 | [Foundations](docs/concepts/foundations.md#p1--rust-ownership-and-errors) and two Rust labs | Expand modules, visibility, traits and testing, and provide an API and diagnostic review reference. | High |
 | [P2 · Cargo builds and dependency management](docs/roadmap/P2.md) | Resolver, feature, build and packaging flows | Workspace, registry and command reference | Retain P2.1/.2 and score graph and output predictions | L2 | [Workspace/lockfile](docs/labs/p2-1-read-cargo-manifests-and-lockfile.md) and packaging labs | Expand resolver, target selection and build/test/package mechanics, and consolidate command choices. | High |
 | [P3 · GitLab CI YAML from zero](docs/roadmap/P3.md) | Configuration compilation and DAG model | Line-by-line YAML and keyword reference | Retain P3.1/.2 and score event, edit and failure cases | L3 | [Baseline](docs/labs/p3-1-read-a-complete-gitlab-ci-file.md) and [reusable YAML](docs/labs/p3-2-review-a-reusable-pipeline-graph.md) labs | Unify the existing keyword cards into a systematic reference and expand configuration-evaluation theory. | High |
@@ -93,7 +93,7 @@ Each phase has a defined roadmap and one planned Knowledge Base chapter and Prac
 | **EDUCATION COMPLETE** | All three layers satisfy their criteria, and diagrams, configuration, scenarios and answers agree. |
 | **LIVE VALIDATION DEFERRED** | Infrastructure and runtime verification are tracked separately in [Future labs](FUTURE-LABS.md). |
 
-P0.1–P6.2 remain completed under their original scope. The [progress log](CURRENT-STATE.md) preserves that historical documentation status. Under the new criteria, P0–P6 are in progress while their layer expansions and alignment reviews are pending. P7–P13 have defined roadmaps and reusable supporting material where listed. Live validation is deferred across all phases.
+P0.1–P6.2 remain completed under their original scope. The [progress log](CURRENT-STATE.md) preserves that historical documentation status. Under the new criteria, P0 is education complete. P1–P6 are in progress while their layer expansions and alignment reviews are pending. P7–P13 have defined roadmaps and reusable supporting material where listed. Live validation is deferred across all phases.
 
 ## Minimum viable enterprise readiness
 
@@ -101,4 +101,4 @@ For work on an existing pipeline, start with the subject hierarchies for the rel
 
 ## Next documentation task
 
-Start with **[P0.A](docs/roadmap/P0.md#p0a--develop-the-knowledge-base-chapter)** to expand the shared job lifecycle model that later GitLab and runner phases build on. For the migration track, P7.A → P7.B now precede the previously queued P7.1. Each phase closes with its Layer C coverage review.
+With P0 complete, continue with **[P1.A](docs/roadmap/P1.md#p1a--develop-the-knowledge-base-chapter)** to expand the Rust language model. For the migration track, P7.A → P7.B now precede the previously queued P7.1. Each phase closes with its Layer C coverage review.
