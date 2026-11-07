@@ -53,6 +53,16 @@
 - Added the [reusable pipeline graph exercise](docs/labs/p3-2-review-a-reusable-pipeline-graph.md) with a typed include, a seven-case event matrix, keyword review card and four worked answers.
 - Checked the configuration and expected graphs against official GitLab documentation. Verified YAML syntax, the example's include and graph references, and Markdown links locally. GitLab CI Lint and pipeline execution remain deferred.
 
+## P4.1 · Completed
+
+- Added the [variable permissions and precedence exercise](docs/labs/p4-1-review-variable-permissions-and-precedence.md) with UI settings ownership, a precedence card, a complete illustrative YAML configuration, seven collision cases and four worked answers.
+- Checked role, precedence and evaluation timing against official GitLab references. Verified local YAML structure, fixture values and Markdown links. GitLab settings, CI Lint and runtime verification remain deferred.
+
+## P4.2 · Completed
+
+- Added the [secret and scope boundary exercise](docs/labs/p4-2-review-secret-and-scope-boundaries.md) with an illustrative Windows pipeline, six access cases and four worked troubleshooting answers.
+- Checked ref protection, MR access, file variables and environment scope against official GitLab documentation. Verified local YAML structure, fixture consistency and Markdown links. GitLab settings, CI Lint and runtime verification remain deferred.
+
 ## Phase status
 
 | Phase | Documentation | Implementation | Runtime verification |
@@ -61,6 +71,7 @@
 | P1 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P2 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P3 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
-| P4–P13 | PLANNED | DEFERRED | DEFERRED |
+| P4 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
+| P5–P13 | PLANNED | DEFERRED | DEFERRED |
 
-Next step is [P4.1](docs/roadmap/P4.md), an offline review of GitLab variable permissions and precedence.
+Next step is [P5.1](docs/roadmap/P5.md), an offline review of cold, warm and stale Cargo caches.

@@ -8,5 +8,7 @@
 - [P2.2 · Review Cargo build and packaging outputs](p2-2-review-cargo-build-and-packaging.md)
 - [P3.1 · Read a complete GitLab CI file](p3-1-read-a-complete-gitlab-ci-file.md)
 - [P3.2 · Review a reusable pipeline graph](p3-2-review-a-reusable-pipeline-graph.md)
+- [P4.1 · Review variable permissions and precedence](p4-1-review-variable-permissions-and-precedence.md)
+- [P4.2 · Review secret and scope boundaries](p4-2-review-secret-and-scope-boundaries.md)
 
 Use the [phase plans](../roadmap/README.md) to find the remaining reading and configuration exercises. Runtime exercises are tracked separately in [Future labs](../../FUTURE-LABS.md).
