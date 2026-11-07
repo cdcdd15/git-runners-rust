@@ -1,0 +1,16 @@
+# Phase plans
+
+- [P0 · GitLab execution lifecycle](P0.md)
+- [P1 · Rust for Java developers](P1.md)
+- [P2 · Cargo builds and dependency management](P2.md)
+- [P3 · GitLab CI YAML from zero](P3.md)
+- [P4 · Variables, roles and secret boundaries](P4.md)
+- [P5 · Cache, artifacts and reuse](P5.md)
+- [P6 · Windows Shell runner](P6.md)
+- [P7 · GitHub Actions migration](P7.md)
+- [P8 · SonarQube quality and coverage](P8.md)
+- [P9 · Nexus IQ dependency policy](P9.md)
+- [P10 · Fortify static security analysis](P10.md)
+- [P11 · End-to-end enterprise pipeline](P11.md)
+- [P12 · Enterprise troubleshooting](P12.md)
+- [P13 · Enterprise readiness assessment](P13.md)
