@@ -33,12 +33,23 @@
 - Added an [offline review of a failing Rust change](docs/labs/p1-2-review-a-failing-rust-change.md) with two ownership diagnostics, a minimal borrowing repair, and a worked CLI regression matrix.
 - Compared the diagnostics and test guidance with official Rust references. Checked Markdown links, fenced blocks, expected byte counts and whitespace locally. Rust examples and test results are illustrative and unexecuted.
 
+## P2.1 · Completed
+
+- Added the [Cargo manifests and lockfile exercise](docs/labs/p2-1-read-cargo-manifests-and-lockfile.md) with a two-member workspace, feature graph walkthrough, mirror configuration and five worked review questions.
+- Checked version requirements, lockfile resolution, feature selection and source replacement against the Cargo Book and the pinned Serde manifest. Verified local links, TOML snippet syntax, fixture relationships and whitespace. Cargo commands and fixtures are illustrative and unexecuted.
+
+## P2.2 · Completed
+
+- Added the [Cargo build and packaging review](docs/labs/p2-2-review-cargo-build-and-packaging.md) with an output matrix, Windows artifact handoff, packaging review and four worked questions.
+- Checked profile, target layout, package behavior and locked resolution against Cargo documentation. Verified local links, example structure, fixture paths and whitespace. The commands and traces are illustrative and unexecuted.
+
 ## Phase status
 
 | Phase | Documentation | Implementation | Runtime verification |
 |---|---|---|---|
 | P0 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P1 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
-| P2–P13 | PLANNED | DEFERRED | DEFERRED |
+| P2 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
+| P3–P13 | PLANNED | DEFERRED | DEFERRED |
 
-Next step is [P2.1](docs/roadmap/P2.md), an offline review of Cargo manifests and a lockfile.
+Next step is [P3.1](docs/roadmap/P3.md), an offline review of a complete GitLab CI configuration and core job keywords.

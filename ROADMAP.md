@@ -9,22 +9,24 @@
 
 The hour ranges are provisional study estimates. All current phases use offline reading, configuration review and tabletop exercises. The separate [future labs](FUTURE-LABS.md) track deferred implementation and runtime verification.
 
-| Phase | Prerequisites | Hours | Exercise mode |
-|---|---|---:|---|
-| [P0 · GitLab execution lifecycle](docs/roadmap/P0.md) | — | 2–3 | Offline |
-| [P1 · Rust for Java developers](docs/roadmap/P1.md) | P0 | 5–7 | Offline |
-| [P2 · Cargo builds and dependency management](docs/roadmap/P2.md) | P1 | 4–6 | Offline |
-| [P3 · GitLab CI YAML from zero](docs/roadmap/P3.md) | P0 | 5–8 | Offline |
-| [P4 · Variables, roles and secret boundaries](docs/roadmap/P4.md) | P3 | 3–5 | Offline |
-| [P5 · Cache, artifacts and reuse](docs/roadmap/P5.md) | P2, P3 | 4–6 | Offline |
-| [P6 · Windows Shell runner](docs/roadmap/P6.md) | P3, P4 | 6–9 | Offline |
-| [P7 · GitHub Actions migration](docs/roadmap/P7.md) | P5, P6 | 4–6 | Offline |
-| [P8 · SonarQube quality and coverage](docs/roadmap/P8.md) | P2, P5, P6 | 4–6 | Offline |
-| [P9 · Nexus IQ dependency policy](docs/roadmap/P9.md) | P2, P5, P6 | 3–5 | Offline |
-| [P10 · Fortify static security analysis](docs/roadmap/P10.md) | P2, P5, P6 | 4–7 | Offline |
-| [P11 · End-to-end enterprise pipeline](docs/roadmap/P11.md) | P4, P5, P6, P8, P9, P10 | 6–10 | Offline |
-| [P12 · Enterprise troubleshooting](docs/roadmap/P12.md) | P4, P5, P6; P11 for integrated drills | 4–6 | Offline |
-| [P13 · Enterprise readiness assessment](docs/roadmap/P13.md) | P7, P11, P12 | 3–5 | Offline |
+Documentation status follows the [progress log](CURRENT-STATE.md#phase-status). ⬜ To do · 🟡 In progress · ✅ Done
+
+| Phase | Status | Prerequisites | Hours | Exercise mode |
+|---|:---:|---|---:|---|
+| [P0 · GitLab execution lifecycle](docs/roadmap/P0.md) | ✅ | — | 2–3 | Offline |
+| [P1 · Rust for Java developers](docs/roadmap/P1.md) | ✅ | P0 | 5–7 | Offline |
+| [P2 · Cargo builds and dependency management](docs/roadmap/P2.md) | ✅ | P1 | 4–6 | Offline |
+| [P3 · GitLab CI YAML from zero](docs/roadmap/P3.md) | ⬜ | P0 | 5–8 | Offline |
+| [P4 · Variables, roles and secret boundaries](docs/roadmap/P4.md) | ⬜ | P3 | 3–5 | Offline |
+| [P5 · Cache, artifacts and reuse](docs/roadmap/P5.md) | ⬜ | P2, P3 | 4–6 | Offline |
+| [P6 · Windows Shell runner](docs/roadmap/P6.md) | ⬜ | P3, P4 | 6–9 | Offline |
+| [P7 · GitHub Actions migration](docs/roadmap/P7.md) | ⬜ | P5, P6 | 4–6 | Offline |
+| [P8 · SonarQube quality and coverage](docs/roadmap/P8.md) | ⬜ | P2, P5, P6 | 4–6 | Offline |
+| [P9 · Nexus IQ dependency policy](docs/roadmap/P9.md) | ⬜ | P2, P5, P6 | 3–5 | Offline |
+| [P10 · Fortify static security analysis](docs/roadmap/P10.md) | ⬜ | P2, P5, P6 | 4–7 | Offline |
+| [P11 · End-to-end enterprise pipeline](docs/roadmap/P11.md) | ⬜ | P4, P5, P6, P8, P9, P10 | 6–10 | Offline |
+| [P12 · Enterprise troubleshooting](docs/roadmap/P12.md) | ⬜ | P4, P5, P6; P11 for integrated drills | 4–6 | Offline |
+| [P13 · Enterprise readiness assessment](docs/roadmap/P13.md) | ⬜ | P7, P11, P12 | 3–5 | Offline |
 
 ## Minimum viable enterprise readiness
 
