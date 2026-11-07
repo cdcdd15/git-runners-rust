@@ -43,6 +43,16 @@
 - Added the [Cargo build and packaging review](docs/labs/p2-2-review-cargo-build-and-packaging.md) with an output matrix, Windows artifact handoff, packaging review and four worked questions.
 - Checked profile, target layout, package behavior and locked resolution against Cargo documentation. Verified local links, example structure, fixture paths and whitespace. The commands and traces are illustrative and unexecuted.
 
+## P3.1 · Completed
+
+- Added the [GitLab CI reading exercise](docs/labs/p3-1-read-a-complete-gitlab-ci-file.md) with three complete illustrative configurations, a core keyword review card and five worked questions.
+- Compared YAML, inheritance, runner capabilities and CI Lint behavior with official GitLab documentation. Verified Markdown links, YAML syntax and expected example structure locally. GitLab CI Lint and pipeline execution remain deferred.
+
+## P3.2 · Completed
+
+- Added the [reusable pipeline graph exercise](docs/labs/p3-2-review-a-reusable-pipeline-graph.md) with a typed include, a seven-case event matrix, keyword review card and four worked answers.
+- Checked the configuration and expected graphs against official GitLab documentation. Verified YAML syntax, the example's include and graph references, and Markdown links locally. GitLab CI Lint and pipeline execution remain deferred.
+
 ## Phase status
 
 | Phase | Documentation | Implementation | Runtime verification |
@@ -50,6 +60,7 @@
 | P0 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P1 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P2 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
-| P3–P13 | PLANNED | DEFERRED | DEFERRED |
+| P3 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
+| P4–P13 | PLANNED | DEFERRED | DEFERRED |
 
-Next step is [P3.1](docs/roadmap/P3.md), an offline review of a complete GitLab CI configuration and core job keywords.
+Next step is [P4.1](docs/roadmap/P4.md), an offline review of GitLab variable permissions and precedence.
