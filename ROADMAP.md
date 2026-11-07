@@ -18,7 +18,7 @@ Documentation status follows the [progress log](CURRENT-STATE.md#phase-status). 
 | [P2 · Cargo builds and dependency management](docs/roadmap/P2.md) | ✅ | P1 | 4–6 | Offline |
 | [P3 · GitLab CI YAML from zero](docs/roadmap/P3.md) | ✅ | P0 | 5–8 | Offline |
 | [P4 · Variables, roles and secret boundaries](docs/roadmap/P4.md) | ✅ | P3 | 3–5 | Offline |
-| [P5 · Cache, artifacts and reuse](docs/roadmap/P5.md) | ⬜ | P2, P3 | 4–6 | Offline |
+| [P5 · Cache, artifacts and reuse](docs/roadmap/P5.md) | ✅ | P2, P3 | 4–6 | Offline |
 | [P6 · Windows Shell runner](docs/roadmap/P6.md) | ⬜ | P3, P4 | 6–9 | Offline |
 | [P7 · GitHub Actions migration](docs/roadmap/P7.md) | ⬜ | P5, P6 | 4–6 | Offline |
 | [P8 · SonarQube quality and coverage](docs/roadmap/P8.md) | ⬜ | P2, P5, P6 | 4–6 | Offline |

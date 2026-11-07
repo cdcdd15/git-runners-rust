@@ -4,5 +4,7 @@
 - [P3.2 root configuration and reusable include](../../docs/labs/p3-2-review-a-reusable-pipeline-graph.md) illustrate event rules and graph selection.
 - [P4.1 variable precedence configuration](../../docs/labs/p4-1-review-variable-permissions-and-precedence.md) compares settings, pipeline overrides, YAML and dotenv.
 - [P4.2 protected and scoped variable configuration](../../docs/labs/p4-2-review-secret-and-scope-boundaries.md) illustrates eligibility and safe presence checks.
+- [P5.1 Cargo cache configuration](../../docs/labs/p5-1-diagnose-cargo-cache-behavior.md) illustrates lockfile-derived keys and separate writer and reader policies.
+- [P5.2 artifact transfer configurations](../../docs/labs/p5-2-trace-artifacts-and-dependency-edges.md) illustrate same-pipeline, parent-child and cross-project handoffs.
 
 Runtime exercises are tracked in [Future labs](../../FUTURE-LABS.md).

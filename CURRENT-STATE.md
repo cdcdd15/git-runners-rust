@@ -63,6 +63,16 @@
 - Added the [secret and scope boundary exercise](docs/labs/p4-2-review-secret-and-scope-boundaries.md) with an illustrative Windows pipeline, six access cases and four worked troubleshooting answers.
 - Checked ref protection, MR access, file variables and environment scope against official GitLab documentation. Verified local YAML structure, fixture consistency and Markdown links. GitLab settings, CI Lint and runtime verification remain deferred.
 
+## P5.1 · Completed
+
+- Added the [Cargo cache trace exercise](docs/labs/p5-1-diagnose-cargo-cache-behavior.md) with a complete illustrative configuration, five diagnostic cases and four worked review questions.
+- Checked cache timing, keys, policies, backend locality and Cargo registry paths against official references. Verified YAML structure, writer and reader cache compatibility, and Markdown links locally. GitLab CI Lint and runtime verification remain deferred.
+
+## P5.2 · Completed
+
+- Added the [artifact transfer exercise](docs/labs/p5-2-trace-artifacts-and-dependency-edges.md) with a cache-free Windows handoff, parent-child and cross-project examples, a retention guide and four worked answers.
+- Checked scheduling, artifact selection, retention and access against official GitLab references. Verified local YAML structure, producer/consumer paths and Markdown links. GitLab CI Lint and runtime verification remain deferred.
+
 ## Phase status
 
 | Phase | Documentation | Implementation | Runtime verification |
@@ -72,6 +82,7 @@
 | P2 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P3 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P4 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
-| P5–P13 | PLANNED | DEFERRED | DEFERRED |
+| P5 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
+| P6–P13 | PLANNED | DEFERRED | DEFERRED |
 
-Next step is [P5.1](docs/roadmap/P5.md), an offline review of cold, warm and stale Cargo caches.
+Next step is [P6.1](docs/roadmap/P6.md), an offline review of Windows runner setup and configuration.
