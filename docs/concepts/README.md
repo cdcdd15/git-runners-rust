@@ -1,5 +1,8 @@
 # Concepts and version checks
 
+- [Foundations for P0–P5](foundations.md) defines the GitLab lifecycle, Rust ownership, Cargo resolution, job graphs, variable eligibility, and cache and artifact boundaries.
+- [Windows Shell Runner for P6](windows-shell-runner.md) explains the service identity, PowerShell execution and client-specific TLS trust.
+
 | Area | Model to use | Official reference |
 |---|---|---|
 | Rust | Ownership governs when values are dropped. Borrowing limits how a value can be accessed. `Result` makes failure part of a function signature. | [Rust Book](https://doc.rust-lang.org/book/) |

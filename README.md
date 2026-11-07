@@ -2,7 +2,7 @@
 
 A Markdown-first training project for Java, Spring and Maven developers joining an enterprise Rust team. Learn to trace, modify and troubleshoot GitLab pipelines running Cargo and enterprise scanners on Windows.
 
-Start with the [roadmap](ROADMAP.md) and [progress log](CURRENT-STATE.md).
+Use the [roadmap](ROADMAP.md) to choose a phase, read the [concepts and diagrams](docs/concepts/README.md), then apply them in the offline exercises. See the [progress log](CURRENT-STATE.md) for the current step.
 
 | Section | What to use it for |
 |---|---|

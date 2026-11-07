@@ -12,5 +12,7 @@
 - [P4.2 · Review secret and scope boundaries](p4-2-review-secret-and-scope-boundaries.md)
 - [P5.1 · Diagnose Cargo cache behavior](p5-1-diagnose-cargo-cache-behavior.md)
 - [P5.2 · Trace artifacts and dependency edges](p5-2-trace-artifacts-and-dependency-edges.md)
+- [P6.1 · Review Windows runner setup and configuration](p6-1-review-windows-runner-setup.md)
+- [P6.2 · Diagnose a Windows service-context failure](p6-2-diagnose-windows-service-context.md)
 
 Use the [phase plans](../roadmap/README.md) to find the remaining reading and configuration exercises. Runtime exercises are tracked separately in [Future labs](../../FUTURE-LABS.md).

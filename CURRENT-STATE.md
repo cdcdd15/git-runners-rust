@@ -73,6 +73,17 @@
 - Added the [artifact transfer exercise](docs/labs/p5-2-trace-artifacts-and-dependency-edges.md) with a cache-free Windows handoff, parent-child and cross-project examples, a retention guide and four worked answers.
 - Checked scheduling, artifact selection, retention and access against official GitLab references. Verified local YAML structure, producer/consumer paths and Markdown links. GitLab CI Lint and runtime verification remain deferred.
 
+## P6.1 · Completed
+
+- Added the [Windows runner setup exercise](docs/labs/p6-1-review-windows-runner-setup.md) with a registration walkthrough, service identity review, annotated TOML and YAML, and four worked answers.
+- Checked role requirements, registration and service commands, runner settings and verification boundaries against official GitLab references. Verified local TOML and YAML structure and Markdown links. Windows registration, service setup and runtime verification remain deferred.
+
+## P6.2 · Completed
+
+- Added the [Windows Shell Runner concept guide](docs/concepts/windows-shell-runner.md) and the [service-context exercise](docs/labs/p6-2-diagnose-windows-service-context.md) covering executable lookup, TLS, native exit status and artifact collection.
+- Added [foundations for P0–P5](docs/concepts/foundations.md) and linked the concept guides from the phase plans. Updated the study order so learners encounter definitions and diagrams before exercises.
+- Checked concepts against official GitLab, Cargo and PowerShell references. Verified Markdown links, fenced examples, phase status and whitespace locally. Windows setup and runtime verification remain deferred.
+
 ## Phase status
 
 | Phase | Documentation | Implementation | Runtime verification |
@@ -83,6 +94,7 @@
 | P3 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P4 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P5 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
-| P6–P13 | PLANNED | DEFERRED | DEFERRED |
+| P6 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
+| P7–P13 | PLANNED | DEFERRED | DEFERRED |
 
-Next step is [P6.1](docs/roadmap/P6.md), an offline review of Windows runner setup and configuration.
+Next step is [P7.1](docs/roadmap/P7.md), reading a source GitHub Actions workflow for migration.

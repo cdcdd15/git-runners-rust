@@ -5,6 +5,10 @@
 - **Track A · Enterprise survival.** Follow P0 → P3 → P4 → P6, then P5 once Cargo basics are in place. Read the P8–P10 support and result contracts alongside an existing P11 pipeline. Finish with P12 triage and the P13 operator exercise. Use P1.1 and P2.1 when a Cargo or compiler diagnosis requires them.
 - **Track B · Read and design from scratch.** P0 → P1 → P2 → P3 → P4 → P5 → P6 → P7 → P8/P9/P10 → P11 → P12 → P13. P7 and the three scanner phases can be scheduled independently after their prerequisites.
 
+## How to study a phase
+
+Read the concepts, definitions and diagrams first, then review the annotated configuration and work through the offline exercise. Use the [foundations for P0–P5](docs/concepts/foundations.md) and [Windows Shell Runner concepts for P6](docs/concepts/windows-shell-runner.md).
+
 ## Phase dependencies and study effort
 
 The hour ranges are provisional study estimates. All current phases use offline reading, configuration review and tabletop exercises. The separate [future labs](FUTURE-LABS.md) track deferred implementation and runtime verification.
@@ -19,7 +23,7 @@ Documentation status follows the [progress log](CURRENT-STATE.md#phase-status). 
 | [P3 · GitLab CI YAML from zero](docs/roadmap/P3.md) | ✅ | P0 | 5–8 | Offline |
 | [P4 · Variables, roles and secret boundaries](docs/roadmap/P4.md) | ✅ | P3 | 3–5 | Offline |
 | [P5 · Cache, artifacts and reuse](docs/roadmap/P5.md) | ✅ | P2, P3 | 4–6 | Offline |
-| [P6 · Windows Shell runner](docs/roadmap/P6.md) | ⬜ | P3, P4 | 6–9 | Offline |
+| [P6 · Windows Shell runner](docs/roadmap/P6.md) | ✅ | P3, P4 | 6–9 | Offline |
 | [P7 · GitHub Actions migration](docs/roadmap/P7.md) | ⬜ | P5, P6 | 4–6 | Offline |
 | [P8 · SonarQube quality and coverage](docs/roadmap/P8.md) | ⬜ | P2, P5, P6 | 4–6 | Offline |
 | [P9 · Nexus IQ dependency policy](docs/roadmap/P9.md) | ⬜ | P2, P5, P6 | 3–5 | Offline |
