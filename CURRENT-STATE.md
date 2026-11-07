@@ -18,11 +18,27 @@
 - Compared pipeline graph and log navigation, keyword behavior and runner eligibility with official GitLab documentation. Checked relative links, future-lab coverage, YAML parsing and whitespace locally.
 - Updated the governance, phase plans, navigation and assessment rubric to use offline documentation. [Future labs](FUTURE-LABS.md) track runtime practice independently.
 
+## Enterprise competency module
+
+- Added the [L1–L3 competency model](docs/competency-levels/00-COMPETENCY-MODEL.md), three sets of worked exercises and a scored readiness assessment.
+- Checked word counts excluding fenced examples, local cross-references, required exercise sections and scoring criteria. All examples and incidents are illustrative. The module is separate from phase implementation.
+
+## P1.1 · Completed
+
+- Added the [Rust library and CLI reading exercise](docs/labs/p1-1-read-a-rust-library-and-cli.md) with annotated excerpts, a Java comparison, an ownership and error-flow diagram, and five worked questions.
+- Compared borrowing, lifetime, error propagation and file-read behavior with the official Rust references. Walked through the example inputs against the snippets and checked local links, fenced blocks and whitespace. The snippets remain illustrative and unexecuted.
+
+## P1.2 · Completed
+
+- Added an [offline review of a failing Rust change](docs/labs/p1-2-review-a-failing-rust-change.md) with two ownership diagnostics, a minimal borrowing repair, and a worked CLI regression matrix.
+- Compared the diagnostics and test guidance with official Rust references. Checked Markdown links, fenced blocks, expected byte counts and whitespace locally. Rust examples and test results are illustrative and unexecuted.
+
 ## Phase status
 
 | Phase | Documentation | Implementation | Runtime verification |
 |---|---|---|---|
 | P0 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
-| P1–P13 | PLANNED | DEFERRED | DEFERRED |
+| P1 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
+| P2–P13 | PLANNED | DEFERRED | DEFERRED |
 
-Next step is [P1.1](docs/roadmap/P1.md), an annotated reading exercise on Rust ownership, borrowing and typed errors.
+Next step is [P2.1](docs/roadmap/P2.md), an offline review of Cargo manifests and a lockfile.

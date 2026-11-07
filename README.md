@@ -14,6 +14,7 @@ Start with the [roadmap](ROADMAP.md) and [progress log](CURRENT-STATE.md).
 | [Troubleshooting](docs/troubleshooting/README.md) | Separate scheduling, execution and policy failures |
 | [Enterprise scenarios](docs/enterprise-scenarios/README.md) | Practice decisions from realistic incident reports |
 | [Examples](examples/README.md) | Find the planned Rust, CI, migration and runner examples |
+| [Competency levels](docs/competency-levels/00-COMPETENCY-MODEL.md) | Practice understanding, modifying and troubleshooting existing configurations |
 | [Assessments](assessments/README.md) | Measure operator and builder readiness |
 
 The current track needs a text editor or Markdown reader. Work through the examples and answer keys before looking at the [future labs](FUTURE-LABS.md), which list infrastructure and permission requirements for separately authorized runtime practice.
