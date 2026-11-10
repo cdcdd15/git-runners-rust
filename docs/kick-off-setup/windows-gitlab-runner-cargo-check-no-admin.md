@@ -112,9 +112,48 @@ This changes only the current PowerShell process and its child processes. It doe
 
 If Git is available as a portable executable but is not on PATH, similarly prepend its **actual** executable directory to `$env:PATH` for this session. Do not assume a particular installation directory.
 
-### If Rust/Cargo is not installed
+### If Rust/Cargo is not installed — concrete no-admin installation
 
-Use an organization-approved **per-user** Rust toolchain installation or a pre-provisioned portable toolchain in a user-writable folder. A standard `rustup` installation may offer to update your **user PATH** persistently: decline that option if strict zero-persistent-environment-changes is required, or use an approved method that does not change it. Then prepend the actual Cargo executable directory to `$env:PATH` **only in the PowerShell session** as shown above.
+The usual Windows Rust installer is **rustup**, which installs and manages both the Rust compiler (`rustc`) and Cargo. By default, its files live inside your own Windows profile, so **Windows administrator rights are not inherently required**. This example intentionally avoids permanent user or system environment-variable changes.
+
+**4A. Obtain the official installer.** In your browser, open [https://rustup.rs/](https://rustup.rs/) and follow its Windows download link. On a typical 64-bit Intel/AMD Windows PC, download the Windows x86-64 `rustup-init.exe` to your **Downloads** folder. On ARM64 Windows, use the appropriate supported installer/toolchain instead. In a corporate environment, use the company-approved source and confirm downloads/execution are permitted.
+
+**4B. Install from a normal PowerShell window.** Run the installer from its actual downloaded location (adjust the path if your browser renamed or relocated it):
+
+```powershell
+$RustupInstaller = Join-Path $HOME 'Downloads\rustup-init.exe'
+Test-Path $RustupInstaller
+& $RustupInstaller -y --no-modify-path --default-toolchain stable
+```
+
+`Test-Path` should print `True` before running the next line. The `-y` flag accepts the installer's defaults; `--no-modify-path` prevents rustup from updating your persistent `PATH`; `--default-toolchain stable` selects the stable Rust toolchain. If the installer reports an error, resolve that error rather than assuming Rust was installed.
+
+> **Windows C++ build tools:** The default Windows Rust toolchain commonly uses the MSVC target. Rustup may warn that Microsoft C++ build tools or a Windows SDK are missing. Installing those components can require administrator rights or IT assistance. For this minimal **`cargo check`** exercise, linking an executable is not required, so the check may succeed without a linker; later `cargo build`, `cargo run`, or tests can require additional native tooling. Do not treat a successful `cargo check` as proof that full native builds work.
+
+**4C. Locate the installed files.** With rustup's default per-user locations:
+
+```powershell
+$CargoBin = Join-Path $HOME '.cargo\bin'
+Test-Path (Join-Path $CargoBin 'cargo.exe')
+Test-Path (Join-Path $CargoBin 'rustc.exe')
+```
+
+Both checks should return `True`. The Rust toolchains themselves are usually under `$HOME\.rustup\toolchains`; `.cargo\bin` contains the command launchers.
+
+**4D. Make Cargo available in this PowerShell session only.**
+
+```powershell
+$env:PATH = "$CargoBin;$env:PATH"
+cargo --version
+rustc --version
+rustup show active-toolchain
+```
+
+**Expected:** Cargo and rustc report versions, and rustup reports the active stable toolchain. This `PATH` adjustment exists **only in this PowerShell session and processes it starts**; it does not change Windows Settings, registry user/system PATH, or other terminal sessions.
+
+**4E. Launch GitLab Runner from this same PowerShell session** using Step 5. Because the runner is a child process, it inherits the temporary `PATH`, and its PowerShell job can find Cargo. After closing the terminal, repeat the temporary `PATH` command before restarting the runner. You do **not** need to reinstall Rust each time.
+
+**Alternative with no `PATH` change at all:** In your CI YAML, invoke Cargo by its full user-profile path (for example, `& "$HOME\.cargo\bin\cargo.exe" check --locked`) and similarly invoke rustc by full path if needed. The session-only `PATH` approach is simpler for the existing YAML and keeps it portable.
 
 Installing Rust on a managed corporate machine can be restricted by policy even when Windows elevation is technically unnecessary. If your organization blocks downloads or execution, request an approved installation rather than bypassing controls.
 
