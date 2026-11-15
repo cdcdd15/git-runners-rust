@@ -5,4 +5,4 @@
 - [P2.1 Cargo manifest and lockfile excerpts](../../docs/labs/p2-1-read-cargo-manifests-and-lockfile.md) show workspace resolution, feature activation and registry mirroring.
 - [P2.2 build and package examples](../../docs/labs/p2-2-review-cargo-build-and-packaging.md) show how Cargo profiles and target triples affect release outputs.
 
-Runnable exercises are tracked in [Future labs](../../FUTURE-LABS.md).
+Runnable exercises are tracked in [Future labs](../../future-labs.md).

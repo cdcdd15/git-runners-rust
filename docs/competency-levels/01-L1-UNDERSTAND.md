@@ -1,6 +1,6 @@
 # L1 · Understand
 
-Given an existing configuration, explain what happens, why it happens and which component owns the decision. Produce a short annotated graph with an event, ref, commit, job selection, runner boundary and output. The input is a configuration and a record of assumptions. All examples and traces here are illustrative and unexecuted. The [competency model](00-COMPETENCY-MODEL.md) introduces Ledger Gateway, the enterprise workspace used throughout the module.
+Given an existing configuration, explain what happens, why it happens and which component owns the decision. Produce a short annotated graph with an event, ref, commit, job selection, runner boundary and output. The input is a configuration and a record of assumptions. All examples and traces here are illustrative and unexecuted. The [competency model](00-competency-model.md) introduces Ledger Gateway, the enterprise workspace used throughout the module.
 
 ## Read from the event to the shell
 
@@ -49,7 +49,7 @@ Cargo finds the workspace members through the manifest. The resolver setting inf
 
 Identify variable definitions before reasoning about their effective values. A project setting can outrank a YAML job variable. Protected and environment-scoped values have eligibility conditions before precedence matters. A file variable provides a path to a temporary file. Masking limits supported log output, so record scope and presence without recording values. The role required to change a setting can differ from the access needed to read a job trace. [GitLab variables](https://docs.gitlab.com/ci/variables/)
 
-A Cargo cache supplies reusable input. The artifact in the example is tied to a producer job and consumed through an explicit edge. For release evidence, ask which revision generated the report and which policy owner interpreted it. SonarQube can evaluate quality from analysis and imported coverage. Nexus IQ evaluates dependency policy through a supported input path. Fortify provides static security evidence where the installed Rust scan mode supports it. Verify the supported capability before inferring that an uploaded report covers Rust. [Version and support references](../concepts/README.md)
+A Cargo cache supplies reusable input. The artifact in the example is tied to a producer job and consumed through an explicit edge. For release evidence, ask which revision generated the report and which policy owner interpreted it. SonarQube can evaluate quality from analysis and imported coverage. Nexus IQ evaluates dependency policy through a supported input path. Fortify provides static security evidence where the installed Rust scan mode supports it. Verify the supported capability before inferring that an uploaded report covers Rust. [Version and support references](../knowledge/concepts/README.md)
 
 ## Reading exercises
 
@@ -73,4 +73,4 @@ YAML sets `SCAN_MODE=observe`. An eligible project variable sets `SCAN_MODE=enfo
 
 ## Acceptance
 
-Answer all three exercises and identify the responsible component, decisive evidence and resulting behavior in each. Annotate all three configuration excerpts and explain the difference between a Maven reactor build and a GitLab job dependency. Mark any missing context explicitly. Use the [assessment rubric](04-SUMMARY-VALIDATION.md) before moving to [L2](02-L2-MODIFY.md).
+Answer all three exercises and identify the responsible component, decisive evidence and resulting behavior in each. Annotate all three configuration excerpts and explain the difference between a Maven reactor build and a GitLab job dependency. Mark any missing context explicitly. Use the [assessment rubric](04-summary-validation.md) before moving to [L2](02-l2-modify.md).

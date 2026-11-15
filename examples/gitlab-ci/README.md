@@ -7,4 +7,4 @@
 - [P5.1 Cargo cache configuration](../../docs/labs/p5-1-diagnose-cargo-cache-behavior.md) illustrates lockfile-derived keys and separate writer and reader policies.
 - [P5.2 artifact transfer configurations](../../docs/labs/p5-2-trace-artifacts-and-dependency-edges.md) illustrate same-pipeline, parent-child and cross-project handoffs.
 
-Runtime exercises are tracked in [Future labs](../../FUTURE-LABS.md).
+Runtime exercises are tracked in [Future labs](../../future-labs.md).

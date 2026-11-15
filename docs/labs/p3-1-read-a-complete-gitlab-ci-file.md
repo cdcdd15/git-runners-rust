@@ -1,6 +1,6 @@
 # P3.1 · Read a complete GitLab CI file from zero
 
-**Access** — Offline. Allow 60–75 minutes. Start with the [P0 execution diagrams](../architecture/README.md) and the [Cargo build review](p2-2-review-cargo-build-and-packaging.md). All configurations and diagnostics here are illustrative and unexecuted.
+**Access** — Offline. Allow 60–75 minutes. Start with the [P0 execution diagrams](../knowledge/lessons/P0-enterprise-cicd-architecture/README.md) and the [Cargo build review](p2-2-review-cargo-build-and-packaging.md). All configurations and diagnostics here are illustrative and unexecuted.
 
 Ledger Gateway needs two checks on its existing Windows Rust runner. One validates that Cargo can resolve the committed workspace without changing its lockfile. The second runs the tests. Your task is to read the file as three systems would: a YAML parser builds a data structure, GitLab validates it and schedules jobs, and PowerShell interprets each command after a runner accepts a job. A valid YAML document can still fail either later layer.
 
@@ -19,7 +19,7 @@ Read each indentation level before reading the commands. `check:` names a top-le
 
 ## Complete Windows Shell example
 
-Assume a checkout with a committed workspace lockfile, an eligible runner tagged `windows-rust`, and Cargo on the runner service account's PATH. The runner is configured with the Shell executor and `pwsh`. The repository requires no additional setup for these commands. This file deliberately leaves event-specific admission and job rules for [P3.2](../roadmap/P3.md#p32--review-a-reusable-pipeline-graph).
+Assume a checkout with a committed workspace lockfile, an eligible runner tagged `windows-rust`, and Cargo on the runner service account's PATH. The runner is configured with the Shell executor and `pwsh`. The repository requires no additional setup for these commands. This file deliberately leaves event-specific admission and job rules for [P3.2](../roadmap/p3.md#p32--review-a-reusable-pipeline-graph).
 
 ```yaml
 stages: [validate, test]
@@ -110,4 +110,4 @@ For Maven readers, `validate` and `test` may look like Maven lifecycle phases. H
 
 ## Acceptance
 
-Explain the expected two-job order and the effective settings for each job. Classify each worked error as YAML shape, GitLab configuration, assignment or shell execution, and propose a scoped correction. A local YAML parser can check structure. GitLab CI Lint adds GitLab-specific validation and can simulate pipeline creation, but a simulation of a particular event and ref cannot establish every graph or exercise the runner. Runtime practice remains in [Future labs](../../FUTURE-LABS.md). [CI Lint](https://docs.gitlab.com/ci/yaml/lint/)
+Explain the expected two-job order and the effective settings for each job. Classify each worked error as YAML shape, GitLab configuration, assignment or shell execution, and propose a scoped correction. A local YAML parser can check structure. GitLab CI Lint adds GitLab-specific validation and can simulate pipeline creation, but a simulation of a particular event and ref cannot establish every graph or exercise the runner. Runtime practice remains in [Future labs](../../future-labs.md). [CI Lint](https://docs.gitlab.com/ci/yaml/lint/)

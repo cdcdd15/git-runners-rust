@@ -1,6 +1,6 @@
 # L3 · Troubleshoot
 
-L3 requires the ability to explain the baseline and assess the impact of a proposed configuration change. Given an incident, identify what failed, where it failed, why it failed, how the cause can be verified and how to correct it. All Ledger Gateway configurations, logs and observations here are illustrative and unexecuted. Use the [L2 change method](02-L2-MODIFY.md) to review each proposed correction.
+L3 requires the ability to explain the baseline and assess the impact of a proposed configuration change. Given an incident, identify what failed, where it failed, why it failed, how the cause can be verified and how to correct it. All Ledger Gateway configurations, logs and observations here are illustrative and unexecuted. Use the [L2 change method](02-l2-modify.md) to review each proposed correction.
 
 ## Triage by boundary
 
@@ -91,8 +91,8 @@ Sonar submission: no task ID
 
 ## Gate and access triage
 
-Distinguish analysis submission, processing and policy decision. For SonarQube, correlate analysis task, coverage paths and the quality gate. For Nexus IQ, confirm application, policy stage and matched dependencies before interpreting a block. For Fortify, confirm supported Rust scan mode, report ingestion and the policy decision. For a missing credential, compare source, scope, ref protection and caller permissions before rotating it. For endpoint errors, separate TLS trust, proxy and authorization evidence. [Vendor references](../concepts/README.md)
+Distinguish analysis submission, processing and policy decision. For SonarQube, correlate analysis task, coverage paths and the quality gate. For Nexus IQ, confirm application, policy stage and matched dependencies before interpreting a block. For Fortify, confirm supported Rust scan mode, report ingestion and the policy decision. For a missing credential, compare source, scope, ref protection and caller permissions before rotating it. For endpoint errors, separate TLS trust, proxy and authorization evidence. [Vendor references](../knowledge/concepts/README.md)
 
 ## Acceptance
 
-For each incident, record two plausible alternatives, one observation that discriminates between them, the root cause, correction owner, recovery evidence and a preventive action. Explain why the first hypothesis failed. Apply the [L3 scoring criteria](04-SUMMARY-VALIDATION.md).
+For each incident, record two plausible alternatives, one observation that discriminates between them, the root cause, correction owner, recovery evidence and a preventive action. Explain why the first hypothesis failed. Apply the [L3 scoring criteria](04-summary-validation.md).

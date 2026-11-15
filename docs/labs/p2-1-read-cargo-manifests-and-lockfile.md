@@ -119,4 +119,4 @@ The inverse feature view helps locate who requested a feature. Match the job's p
 
 ## Acceptance
 
-Explain the two edges to Serde, why the selected version can stay fixed while features change, and how to identify the actual fetch endpoint. Classify a lockfile mismatch, a missing feature request and a mirror transport failure using the evidence above. Continue with [P2.2](../roadmap/P2.md#p22--review-build-and-packaging-outputs) for build profiles, targets and packaging.
+Explain the two edges to Serde, why the selected version can stay fixed while features change, and how to identify the actual fetch endpoint. Classify a lockfile mismatch, a missing feature request and a mirror transport failure using the evidence above. Continue with [P2.2](../roadmap/p2.md#p22--review-build-and-packaging-outputs) for build profiles, targets and packaging.

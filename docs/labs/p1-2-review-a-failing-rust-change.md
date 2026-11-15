@@ -84,4 +84,4 @@ Java would copy the reference when passing a `String` to a helper. With Rust's o
 | Wrong byte count | Check the untrimmed buffer, line endings and any non-ASCII characters before changing the parser. |
 | Correct diagnostic appears on stdout | Inspect the output macro and check whether the CLI's machine-readable output contract changed. |
 
-Pass the offline review when you can identify both diagnostics and their triggering lines, justify the borrowed interface, and predict all four CLI outcomes. Explain one situation where an independent owned value is justified and which tests would distinguish a compile failure from a behavior regression. Runtime practice remains in the [future labs](../../FUTURE-LABS.md).
+Pass the offline review when you can identify both diagnostics and their triggering lines, justify the borrowed interface, and predict all four CLI outcomes. Explain one situation where an independent owned value is justified and which tests would distinguish a compile failure from a behavior regression. Runtime practice remains in the [future labs](../../future-labs.md).

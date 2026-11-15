@@ -16,11 +16,11 @@
 
 - Added the [offline pipeline walkthrough](docs/labs/p0-2-pipeline-walkthrough.md) with complete illustrative YAML, a simulated job graph and trace, and four worked configuration-reading exercises.
 - Compared pipeline graph and log navigation, keyword behavior and runner eligibility with official GitLab documentation. Checked relative links, future-lab coverage, YAML parsing and whitespace locally.
-- Updated the governance, phase plans, navigation and assessment rubric to use offline documentation. [Future labs](FUTURE-LABS.md) track runtime practice independently.
+- Updated the governance, phase plans, navigation and assessment rubric to use offline documentation. [Future labs](future-labs.md) track runtime practice independently.
 
 ## Enterprise competency module
 
-- Added the [L1–L3 competency model](docs/competency-levels/00-COMPETENCY-MODEL.md), three sets of worked exercises and a scored readiness assessment.
+- Added the [L1–L3 competency model](docs/competency-levels/00-competency-model.md), three sets of worked exercises and a scored readiness assessment.
 - Checked word counts excluding fenced examples, local cross-references, required exercise sections and scoring criteria. All examples and incidents are illustrative. The module is separate from phase implementation.
 
 ## P1.1 · Completed
@@ -80,16 +80,16 @@
 
 ## P6.2 · Completed
 
-- Added the [Windows Shell Runner concept guide](docs/concepts/windows-shell-runner.md) and the [service-context exercise](docs/labs/p6-2-diagnose-windows-service-context.md) covering executable lookup, TLS, native exit status and artifact collection.
-- Added [foundations for P0–P5](docs/concepts/foundations.md) and linked the concept guides from the phase plans. Updated the study order so learners encounter definitions and diagrams before exercises.
+- Added the [Windows Shell Runner concept guide](docs/knowledge/concepts/windows-shell-runner.md) and the [service-context exercise](docs/labs/p6-2-diagnose-windows-service-context.md) covering executable lookup, TLS, native exit status and artifact collection.
+- Added [foundations for P0–P5](docs/knowledge/concepts/foundations.md) and linked the concept guides from the phase plans. Updated the study order so learners encounter definitions and diagrams before exercises.
 - Checked concepts against official GitLab, Cargo and PowerShell references. Verified Markdown links, fenced examples, phase status and whitespace locally. Windows setup and runtime verification remain deferred.
 
 ## P0.A · Knowledge complete
 
-- Added the [GitLab job lifecycle chapter](docs/concepts/job-lifecycle.md) with component and sequence diagrams, alternate paths, configuration ownership and worked knowledge checks.
+- Added the [GitLab job lifecycle chapter](docs/knowledge/concepts/job-lifecycle.md) with component and sequence diagrams, alternate paths, configuration ownership and worked knowledge checks.
 - Compared job execution, long polling, credentials and finalization against GitLab documentation. Checked Markdown links, diagram fences and chapter structure offline. The revised roadmap tracks P0.B and P0.C separately.
 
-The P0 knowledge material is organized in three chapters under [P0 architecture](docs/concepts/job-lifecycle.md). The chapter index preserves existing links from the roadmap, reference and exercises.
+The P0 knowledge material is organized in three chapters under [P0 architecture](docs/knowledge/concepts/job-lifecycle.md). The chapter index preserves existing links from the roadmap, reference and exercises.
 
 ## P0.B · Reference complete
 
@@ -98,7 +98,7 @@ The P0 knowledge material is organized in three chapters under [P0 architecture]
 
 ## P0.C · Education complete
 
-- Added the [P0 scoring crosswalk](docs/roadmap/P0.md#p0-scoring-crosswalk) and retained both trace exercises. Added focused prompts for a scoped workflow change and an evidence-based artifact diagnosis.
+- Added the [P0 scoring crosswalk](docs/roadmap/p0.md#p0-scoring-crosswalk) and retained both trace exercises. Added focused prompts for a scoped workflow change and an evidence-based artifact diagnosis.
 - Walked through the fixtures and compared the expected answers with the lifecycle chapter, trace reference and shared rubric. Verified links, the example YAML and status in both roadmap tables. This milestone establishes assessment readiness. Runtime verification remains deferred.
 
 ## Phase status
@@ -114,4 +114,29 @@ The P0 knowledge material is organized in three chapters under [P0 architecture]
 | P6 | DOCUMENTATION COMPLETE | DEFERRED | DEFERRED |
 | P7–P13 | PLANNED | DEFERRED | DEFERRED |
 
-Next step is [P1.A](docs/roadmap/P1.md#p1a--develop-the-knowledge-base-chapter), the Rust language Knowledge Base chapter. The P1–P6 rows record the original documentation milestones.
+Next step is [P1.A](docs/roadmap/p1.md#p1a--develop-the-knowledge-base-chapter), the Rust language Knowledge Base chapter. The P1–P6 rows record the original documentation milestones.
+
+## Linker guide formatting
+
+- Formatted the [Windows linker guide](docs/gitlab-vm-setup/vm-setup/linker.md) with headings, PowerShell and YAML fences, and code-formatted paths and tool names. Checked whitespace and verified the command text against the original.
+
+## Windows and SonarQube architecture diagram
+
+- Recreated the VM setup screenshot as a Mermaid component diagram and added SonarScanner, SonarQube processing and the Quality Gate in a [separate architecture document](docs/gitlab-vm-setup/vm-setup/gitlab-windows-sonarqube-architecture.md).
+- Added a sequence diagram and configuration ownership notes. SonarQube placement is an illustrative assumption. Checked Markdown links and diagram structure locally.
+
+## CycloneDX and SBOM concept guide
+
+- Added the [CycloneDX and SBOM guide](docs/knowledge/concepts/cyclonedx-and-sbom.md), covering inventory scope, document fields, Cargo inputs, evaluation boundaries and troubleshooting. Checked JSON syntax, internal references and whitespace. Examples remain illustrative and unexecuted.
+
+## SCA and SAST concept guide
+
+- Added the [SCA and SAST guide](docs/knowledge/concepts/sca-and-sast.md) with analysis flows, tool responsibilities, a Mermaid diagram, Rust/Maven comparisons and worked knowledge checks. Verified local links, fenced blocks and whitespace. Examples remain illustrative and unexecuted.
+
+## CycloneDX execution location
+
+- Added the [CycloneDX execution-location guide](docs/gitlab-vm-setup/vm-setup/where-cyclonedx-runs.md) explaining development-machine versus runner checkouts, manual generation, CI source handling and the Windows service identity. Verified local links and YAML structure. Examples remain illustrative and unexecuted.
+
+## Lowercase filenames
+
+- Converted filenames to lowercase, with README.md, CURRENT-STATE.md, AGENTS.md and ROADMAP.md retaining uppercase names. Updated exact filename references throughout the documentation. Directory names retain their existing spelling. Finder metadata is ignored in both uppercase and lowercase forms.

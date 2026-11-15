@@ -1,14 +1,14 @@
 # Summary and validation
 
-The three levels measure a progression from explaining an existing configuration to proposing a controlled change and diagnosing a deviation. Use the Ledger Gateway scenario throughout so differences in performance come from the task and evidence. The assessments use illustrative, unexecuted fixtures. They measure readiness to reason from enterprise documentation and evidence, while supervised runtime experience belongs to a separate record. [Competency model](00-COMPETENCY-MODEL.md)
+The three levels measure a progression from explaining an existing configuration to proposing a controlled change and diagnosing a deviation. Use the Ledger Gateway scenario throughout so differences in performance come from the task and evidence. The assessments use illustrative, unexecuted fixtures. They measure readiness to reason from enterprise documentation and evidence, while supervised runtime experience belongs to a separate record. [Competency model](00-competency-model.md)
 
 ## Compare the three levels
 
 | Level | Assessment input | Required output | Observable failure |
 |---|---|---|---|
-| [L1 · Understand](01-L1-UNDERSTAND.md) | Configuration and stated event | Annotated graph and explanation of component ownership | Attributes a scheduling or policy decision to the shell |
-| [L2 · Modify](02-L2-MODIFY.md) | Baseline and business request | Proposed diff, event predictions, approval map and rollback | Changes behavior without identifying the affected paths |
-| [L3 · Troubleshoot](03-L3-TROUBLESHOOT.md) | Symptoms, configuration and evidence | Ranked hypotheses, discriminating checks, correction and recovery proof | Picks a cause before comparing it with the trace |
+| [L1 · Understand](01-l1-understand.md) | Configuration and stated event | Annotated graph and explanation of component ownership | Attributes a scheduling or policy decision to the shell |
+| [L2 · Modify](02-l2-modify.md) | Baseline and business request | Proposed diff, event predictions, approval map and rollback | Changes behavior without identifying the affected paths |
+| [L3 · Troubleshoot](03-l3-troubleshoot.md) | Symptoms, configuration and evidence | Ranked hypotheses, discriminating checks, correction and recovery proof | Picks a cause before comparing it with the trace |
 
 Start with L1 because an incorrect baseline makes both the diff and the diagnosis unreliable. At L2, explain how a proposed change can affect a second event or trust boundary. At L3, treat that prediction as a hypothesis and compare it with observed evidence. Revisit the prior level when an assessment exposes a gap. For instance, if a learner cannot explain why the cache restored successfully while a report was missing, repeat the L1 distinction between cache reuse and a producer-specific artifact before scoring the incident again.
 
@@ -62,7 +62,7 @@ Allocate 30 minutes for L1, 50 minutes for L2 and 45 minutes for L3. Use one exe
 
 ## Learning gaps and next activities
 
-If a learner treats a pipeline and job as interchangeable, redraw the flow in [P0](../roadmap/P0.md) with an explicit queue boundary. If a change preserves its happy path but alters a scheduled run, work through the event matrix in [P3](../roadmap/P3.md). If a diagnosis relies on a successful interactive command, compare the runner service identity and its environment in [P6](../roadmap/P6.md). For a gate interpretation gap, practice separating producer output, submission, processing and policy enforcement in [P8–P10](../roadmap/README.md).
+If a learner treats a pipeline and job as interchangeable, redraw the flow in [P0](../roadmap/p0.md) with an explicit queue boundary. If a change preserves its happy path but alters a scheduled run, work through the event matrix in [P3](../roadmap/p3.md). If a diagnosis relies on a successful interactive command, compare the runner service identity and its environment in [P6](../roadmap/p6.md). For a gate interpretation gap, practice separating producer output, submission, processing and policy enforcement in [P8–P10](../roadmap/README.md).
 
 ## Final readiness checklist
 
@@ -72,4 +72,4 @@ If a learner treats a pipeline and job as interchangeable, redraw the flow in [P
 - [ ] I can separate a quality decision, dependency policy and source security finding from infrastructure failure.
 - [ ] I passed each level's threshold and recorded version assumptions and gaps for a handoff.
 
-Passing establishes readiness for documentation-based review and incident reasoning. Production experience requires separate evidence from authorized execution, change review and recovery under real operating constraints. Track that work in [Future labs](../../FUTURE-LABS.md).
+Passing establishes readiness for documentation-based review and incident reasoning. Production experience requires separate evidence from authorized execution, change review and recovery under real operating constraints. Track that work in [Future labs](../../future-labs.md).

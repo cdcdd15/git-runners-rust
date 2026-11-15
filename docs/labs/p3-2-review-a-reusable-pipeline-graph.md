@@ -162,4 +162,4 @@ See the [GitLab YAML reference](https://docs.gitlab.com/ci/yaml/), [reuse docume
 
 ## Acceptance
 
-Produce the expanded settings for one extended job, explain all seven event outcomes, and distinguish a rejected pipeline, an omitted job, a missing required edge and a blocked manual action. Check the effect of moving the suppression rule below the branch-push rule. No runner is needed to reason about these cases. Runtime validation remains in [Future labs](../../FUTURE-LABS.md).
+Produce the expanded settings for one extended job, explain all seven event outcomes, and distinguish a rejected pipeline, an omitted job, a missing required edge and a blocked manual action. Check the effect of moving the suppression rule below the branch-push rule. No runner is needed to reason about these cases. Runtime validation remains in [Future labs](../../future-labs.md).

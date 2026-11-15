@@ -1,6 +1,6 @@
 # P6.1 · Review Windows runner setup and configuration
 
-**Access** — Offline. Allow 50–65 minutes. Read [job execution](../architecture/README.md), [runner tags in YAML](p3-1-read-a-complete-gitlab-ci-file.md) and [protected variables and runners](p4-2-review-secret-and-scope-boundaries.md). The registration procedure, commands, settings and evidence below are illustrative and unexecuted. The host, account and endpoint are fictional.
+**Access** — Offline. Allow 50–65 minutes. Read [job execution](../knowledge/lessons/P0-enterprise-cicd-architecture/README.md), [runner tags in YAML](p3-1-read-a-complete-gitlab-ci-file.md) and [protected variables and runners](p4-2-review-secret-and-scope-boundaries.md). The registration procedure, commands, settings and evidence below are illustrative and unexecuted. The host, account and endpoint are fictional.
 
 Ledger Gateway wants to route protected release builds to a Windows MSVC pool. Review the proposed GitLab runner record and host service separately. GitLab owns the runner's eligibility. The Windows service loads a local configuration, authenticates to GitLab and requests work. After assignment, the Shell executor runs the generated script on the host under the service identity. The shell decides how the script syntax is interpreted.
 
@@ -85,7 +85,7 @@ Get-CimInstance Win32_Service -Filter "Name='gitlab-runner'" |
 .\gitlab-runner.exe verify --config 'C:\GitLab-Runner\config.toml'
 ```
 
-The service query establishes status and configuration. `verify` checks registered runner connectivity to GitLab, using the environment of the invoking process. It does not establish that the Windows service is running, loaded the same config or can execute a given job. A job trace establishes the actual assignment and service-context tool lookup. `rustc -vV` identifies the Rust toolchain and host triple. A successful native build provides additional linker and SDK evidence. Compare with the next step's [service-context review](../roadmap/P6.md#p62--diagnose-a-windows-service-context-failure). [GitLab Runner verify](https://docs.gitlab.com/runner/commands/#gitlab-runner-verify), [runner configuration](https://docs.gitlab.com/ci/runners/configure_runners/)
+The service query establishes status and configuration. `verify` checks registered runner connectivity to GitLab, using the environment of the invoking process. It does not establish that the Windows service is running, loaded the same config or can execute a given job. A job trace establishes the actual assignment and service-context tool lookup. `rustc -vV` identifies the Rust toolchain and host triple. A successful native build provides additional linker and SDK evidence. Compare with the next step's [service-context review](../roadmap/p6.md#p62--diagnose-a-windows-service-context-failure). [GitLab Runner verify](https://docs.gitlab.com/runner/commands/#gitlab-runner-verify), [runner configuration](https://docs.gitlab.com/ci/runners/configure_runners/)
 
 ## Offline review and worked answers
 
@@ -100,4 +100,4 @@ The service query establishes status and configuration. `verify` checks register
 
 ## Acceptance
 
-Identify the owner and evidence for each setup step. Explain which jobs match the tags and protected ref, which account runs them, where local builds and caches live, and what a successful `verify` establishes. Record why the dedicated Windows VM is part of the release trust boundary. Live registration and execution remain in [Future labs](../../FUTURE-LABS.md).
+Identify the owner and evidence for each setup step. Explain which jobs match the tags and protected ref, which account runs them, where local builds and caches live, and what a successful `verify` establishes. Record why the dedicated Windows VM is part of the release trust boundary. Live registration and execution remain in [Future labs](../../future-labs.md).

@@ -1,12 +1,12 @@
 # Foundations · P0–P5
 
-Read the relevant section before its exercise. The [roadmap](../../ROADMAP.md) sequences the work, and the concept guides explain the system you will apply it to.
+Read the relevant section before its exercise. The [roadmap](../../../ROADMAP.md) sequences the work, and the concept guides explain the system you will apply it to.
 
 ## P0 · From Git event to job result
 
-A **pipeline** is a graph of work for a particular event and ref. A **job** is an individual unit of work. A **stage** supplies default ordering between groups of jobs. GitLab builds the graph and makes jobs eligible. A **runner** requests work and orchestrates an assigned job. An **executor** provides its execution environment. A **shell** interprets the generated commands. The [architecture diagrams](../architecture/README.md) show both the component boundaries and the order of checkout, transfer, execution and cleanup.
+A **pipeline** is a graph of work for a particular event and ref. A **job** is an individual unit of work. A **stage** supplies default ordering between groups of jobs. GitLab builds the graph and makes jobs eligible. A **runner** requests work and orchestrates an assigned job. An **executor** provides its execution environment. A **shell** interprets the generated commands. The [architecture diagrams](../lessons/P0-enterprise-cicd-architecture/README.md) show both the component boundaries and the order of checkout, transfer, execution and cleanup.
 
-A missing pipeline points toward configuration or event admission. A pending job has entered scheduling. A trace that reaches a shell command establishes that assignment and earlier preparation steps have occurred. Start investigating at the last boundary you can confirm. [Trace reading practice](../labs/p0-1-job-trace.md)
+A missing pipeline points toward configuration or event admission. A pending job has entered scheduling. A trace that reaches a shell command establishes that assignment and earlier preparation steps have occurred. Start investigating at the last boundary you can confirm. [Trace reading practice](../../labs/p0-1-job-trace.md)
 
 ## P1 · Rust ownership and errors
 
@@ -19,7 +19,7 @@ flowchart LR
     B --> D["Invalid: return a typed error"]
 ```
 
-A **Result** carries either a success value or an error. The question-mark operator propagates an error from the current function. Compared with Java's pass-by-value of object references, passing an owned Rust String by value transfers ownership. A Rust trait defines shared behavior, broadly analogous to a Java interface, while an enum can carry different data in each variant and be handled exhaustively with a match. [Rust Book](https://doc.rust-lang.org/book/), [parser reading practice](../labs/p1-1-read-a-rust-library-and-cli.md)
+A **Result** carries either a success value or an error. The question-mark operator propagates an error from the current function. Compared with Java's pass-by-value of object references, passing an owned Rust String by value transfers ownership. A Rust trait defines shared behavior, broadly analogous to a Java interface, while an enum can carry different data in each variant and be handled exhaustively with a match. [Rust Book](https://doc.rust-lang.org/book/), [parser reading practice](../../labs/p1-1-read-a-rust-library-and-cli.md)
 
 ## P2 · Cargo resolution and compilation
 
@@ -33,7 +33,7 @@ flowchart LR
     A --> E["Package selected source into a crate archive"]
 ```
 
-The **target triple** identifies the destination platform. The **profile** controls compilation settings such as optimization and debug information. A workspace resembles a Maven reactor, while Cargo feature selection and locked resolution have their own rules. [Cargo Book](https://doc.rust-lang.org/cargo/), [resolution practice](../labs/p2-1-read-cargo-manifests-and-lockfile.md)
+The **target triple** identifies the destination platform. The **profile** controls compilation settings such as optimization and debug information. A workspace resembles a Maven reactor, while Cargo feature selection and locked resolution have their own rules. [Cargo Book](https://doc.rust-lang.org/cargo/), [resolution practice](../../labs/p2-1-read-cargo-manifests-and-lockfile.md)
 
 ## P3 · GitLab configuration and job graphs
 
@@ -47,7 +47,7 @@ flowchart LR
     D --> E["Assign runner and execute"]
 ```
 
-A YAML parser can accept a stage name that GitLab rejects. GitLab can accept a command string that the configured shell cannot execute. Check these layers separately. [GitLab YAML reference](https://docs.gitlab.com/ci/yaml/), [configuration practice](../labs/p3-1-read-a-complete-gitlab-ci-file.md)
+A YAML parser can accept a stage name that GitLab rejects. GitLab can accept a command string that the configured shell cannot execute. Check these layers separately. [GitLab YAML reference](https://docs.gitlab.com/ci/yaml/), [configuration practice](../../labs/p3-1-read-a-complete-gitlab-ci-file.md)
 
 ## P4 · Variables and trust boundaries
 
@@ -60,7 +60,7 @@ flowchart LR
     C --> D["Expose value or temporary file path to job"]
 ```
 
-Review permissions separately. Permission to change repository YAML, edit a project variable, or administer a group are distinct decisions. [GitLab variables](https://docs.gitlab.com/ci/variables/), [precedence practice](../labs/p4-1-review-variable-permissions-and-precedence.md), [scope practice](../labs/p4-2-review-secret-and-scope-boundaries.md)
+Review permissions separately. Permission to change repository YAML, edit a project variable, or administer a group are distinct decisions. [GitLab variables](https://docs.gitlab.com/ci/variables/), [precedence practice](../../labs/p4-1-review-variable-permissions-and-precedence.md), [scope practice](../../labs/p4-2-review-secret-and-scope-boundaries.md)
 
 ## P5 · Cache and artifact provenance
 
@@ -73,4 +73,4 @@ flowchart LR
     C -->|Producer identity and transfer edge| D["Verification job"]
 ```
 
-Treat registry cache contents like reusable downloads in a Maven local repository. For a binary handoff, record the producing job and expected commit. A cross-project lookup by ref can select an earlier successful job while a newer one is still running. [GitLab caching](https://docs.gitlab.com/ci/caching/), [job artifacts](https://docs.gitlab.com/ci/jobs/job_artifacts/), [artifact practice](../labs/p5-2-trace-artifacts-and-dependency-edges.md)
+Treat registry cache contents like reusable downloads in a Maven local repository. For a binary handoff, record the producing job and expected commit. A cross-project lookup by ref can select an earlier successful job while a newer one is still running. [GitLab caching](https://docs.gitlab.com/ci/caching/), [job artifacts](https://docs.gitlab.com/ci/jobs/job_artifacts/), [artifact practice](../../labs/p5-2-trace-artifacts-and-dependency-edges.md)

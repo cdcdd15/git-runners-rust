@@ -2,19 +2,19 @@
 
 A Markdown-first training project for Java, Spring and Maven developers joining an enterprise Rust team. Learn to trace, modify and troubleshoot GitLab pipelines running Cargo and enterprise scanners on Windows.
 
-Use the [roadmap](ROADMAP.md) to choose a phase, read the [concepts and diagrams](docs/concepts/README.md), then apply them in the offline exercises. See the [progress log](CURRENT-STATE.md) for the current step.
+Use the [roadmap](ROADMAP.md) to choose a phase, read the [concepts and diagrams](docs/knowledge/concepts/README.md), then apply them in the offline exercises. See the [progress log](CURRENT-STATE.md) for the current step.
 
 | Section | What to use it for |
 |---|---|
-| [Architecture](docs/architecture/README.md) | Trace a job from push to cleanup |
-| [Concepts](docs/concepts/README.md) | Look up configuration, trust boundaries and vendor support |
+| [Architecture](docs/knowledge/lessons/P0-enterprise-cicd-architecture/README.md) | Trace a job from push to cleanup |
+| [Concepts](docs/knowledge/concepts/README.md) | Look up configuration, trust boundaries and vendor support |
 | [Phase plans](docs/roadmap/README.md) | Pick the next bounded step |
 | [Labs](docs/labs/README.md) | Find offline reading exercises |
-| [Cheat sheets](docs/cheat-sheets/README.md) | Look up operational checks |
+| [Cheat sheets](docs/knowledge/cheat-sheets/README.md) | Look up operational checks |
 | [Troubleshooting](docs/troubleshooting/README.md) | Separate scheduling, execution and policy failures |
-| [Enterprise scenarios](docs/enterprise-scenarios/README.md) | Practice decisions from realistic incident reports |
+| [Enterprise scenarios](docs/labs/enterprise-scenarios/README.md) | Practice decisions from realistic incident reports |
 | [Examples](examples/README.md) | Find the planned Rust, CI, migration and runner examples |
-| [Competency levels](docs/competency-levels/00-COMPETENCY-MODEL.md) | Practice understanding, modifying and troubleshooting existing configurations |
+| [Competency levels](docs/competency-levels/00-competency-model.md) | Practice understanding, modifying and troubleshooting existing configurations |
 | [Assessments](assessments/README.md) | Measure operator and builder readiness |
 
-The current track needs a text editor or Markdown reader. Work through the examples and answer keys before looking at the [future labs](FUTURE-LABS.md), which list infrastructure and permission requirements for separately authorized runtime practice.
+The current track needs a text editor or Markdown reader. Work through the examples and answer keys before looking at the [future labs](future-labs.md), which list infrastructure and permission requirements for separately authorized runtime practice.

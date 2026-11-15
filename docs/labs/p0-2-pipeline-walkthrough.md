@@ -80,7 +80,7 @@ In an existing project, correlate these fields by opening **Build → Pipelines*
 
 ## P0.C · Scored review extensions
 
-Use the [P0 scoring crosswalk](../roadmap/P0.md#p0-scoring-crosswalk). Draft each answer before reading its calibration notes.
+Use the [P0 scoring crosswalk](../roadmap/p0.md#p0-scoring-crosswalk). Draft each answer before reading its calibration notes.
 
 **L2 · Scope a change.** The maintainer wants a nightly schedule on `main` to run both existing jobs. Keep feature-branch pushes excluded and existing MR and default-branch push behavior. Show the smallest diff, two event predictions, the approval owner and a rollback. Explain what the scheduled pipeline inherits for routing and data transfer.
 
@@ -98,4 +98,4 @@ A schedule targeting `main` now admits both jobs. A feature-branch push still ma
 
 ## Acceptance
 
-From the example, identify the event, ref, commit, graph edge, runner, executor, shell and last successful boundary for each incident. Explain how a missing pipeline, pending job, failed checkout and failed artifact download differ, and predict the effect of the proposed YAML edit. Use the worked answers to score the exercise. Runtime practice is listed in [Future labs](../../FUTURE-LABS.md).
+From the example, identify the event, ref, commit, graph edge, runner, executor, shell and last successful boundary for each incident. Explain how a missing pipeline, pending job, failed checkout and failed artifact download differ, and predict the effect of the proposed YAML edit. Use the worked answers to score the exercise. Runtime practice is listed in [Future labs](../../future-labs.md).

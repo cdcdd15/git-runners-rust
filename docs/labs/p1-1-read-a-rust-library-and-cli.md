@@ -140,4 +140,4 @@ The Rust compiler checks the borrowing relationship during compilation. At runti
 
 ## Acceptance
 
-Trace who owns the path and text, identify where a borrow begins and ends, and predict the CLI outcome for both a read error and a parse error. Use the worked answers to explain the difference between compiler-enforced reference validity and runtime error propagation. The next [P1 step](../roadmap/P1.md) applies this reasoning to a proposed change.
+Trace who owns the path and text, identify where a borrow begins and ends, and predict the CLI outcome for both a read error and a parse error. Use the worked answers to explain the difference between compiler-enforced reference validity and runtime error propagation. The next [P1 step](../roadmap/p1.md) applies this reasoning to a proposed change.

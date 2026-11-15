@@ -1,6 +1,6 @@
 # P6.2 · Diagnose a Windows service-context failure
 
-**Access** — Offline. Read [Windows Shell Runner concepts](../concepts/windows-shell-runner.md) and [P6.1](p6-1-review-windows-runner-setup.md) first. All configuration, traces and fixes are illustrative and unexecuted.
+**Access** — Offline. Read [Windows Shell Runner concepts](../knowledge/concepts/windows-shell-runner.md) and [P6.1](p6-1-review-windows-runner-setup.md) first. All configuration, traces and fixes are illustrative and unexecuted.
 
 Ledger Gateway's release job runs on a Windows Shell runner. The administrator can build in an interactive terminal, but the service job fails. Three successive traces show how an initial failure can hide the next one. For each trace, name the last successful boundary, the narrowest correction, and the evidence that would confirm recovery.
 
@@ -68,4 +68,4 @@ PowerShell's call operator invokes the resolved executable even when its path co
 
 ## Acceptance
 
-For all three traces, identify the failing component, explain which prior boundary succeeded, propose a correction and name the recovery evidence. Explain why a successful GitLab connectivity check, an administrator's terminal and a file found on disk are insufficient for the three respective failures. Runtime work remains in [Future labs](../../FUTURE-LABS.md).
+For all three traces, identify the failing component, explain which prior boundary succeeded, propose a correction and name the recovery evidence. Explain why a successful GitLab connectivity check, an administrator's terminal and a file found on disk are insufficient for the three respective failures. Runtime work remains in [Future labs](../../future-labs.md).

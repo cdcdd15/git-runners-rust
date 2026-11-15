@@ -1,6 +1,6 @@
 # P0.1 · Annotate a GitLab job trace
 
-**Access** — Local. Allow 25–35 minutes. Read the [lifecycle chapter](../concepts/job-lifecycle.md) and [trace reference](../references/job-trace-reference.md) before annotating the fixture.
+**Access** — Local. Allow 25–35 minutes. Read the [lifecycle chapter](../knowledge/concepts/job-lifecycle.md) and [trace reference](../references/job-trace-reference.md) before annotating the fixture.
 
 The fixture is a simulation of a successful job on a Windows Shell runner using PowerShell Core. Line numbers and messages are instructional. Real trace headings vary by runner version and job configuration.
 
@@ -27,7 +27,7 @@ The push created a pipeline with a `test` job. The job is eligible for a dedicat
 
 1. Before checking the answer, label each line with its execution phase and owner. Distinguish the component arranging the work from the process running a command.
 2. Mark the first point where Cargo can run, the producer of each downloaded input, and the point where the test summary becomes available to another job.
-3. Compare the labels with the [architecture sequence diagram](../architecture/README.md) and the [official job execution flow](https://docs.gitlab.com/ci/jobs/job_execution/). Record any differences in scope. For example, the official sequence also covers optional hooks and referee data.
+3. Compare the labels with the [architecture sequence diagram](../knowledge/lessons/P0-enterprise-cicd-architecture/README.md) and the [official job execution flow](https://docs.gitlab.com/ci/jobs/job_execution/). Record any differences in scope. For example, the official sequence also covers optional hooks and referee data.
 4. For each variant below, name the last successful boundary and the first check you would make.
 
    - The job remains pending and has no runner execution trace.
@@ -57,4 +57,4 @@ GitLab evaluated configuration and queued the job before line 01. A runner reque
 
 ## Acceptance
 
-Correctly place checkout, cache restore, artifact download, main script, cache and artifact upload, and cleanup. Explain the difference between pending and checkout failure, and identify what proves the summary was published. The table above records the observed ordering in the simulated fixture. Use the [P0 scoring crosswalk](../roadmap/P0.md#p0-scoring-crosswalk) for offline validation. Live trace verification is tracked in [Future labs](../../FUTURE-LABS.md).
+Correctly place checkout, cache restore, artifact download, main script, cache and artifact upload, and cleanup. Explain the difference between pending and checkout failure, and identify what proves the summary was published. The table above records the observed ordering in the simulated fixture. Use the [P0 scoring crosswalk](../roadmap/p0.md#p0-scoring-crosswalk) for offline validation. Live trace verification is tracked in [Future labs](../../future-labs.md).

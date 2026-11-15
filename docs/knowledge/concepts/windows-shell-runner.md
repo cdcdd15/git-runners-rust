@@ -53,4 +53,4 @@ Read the failing client and URL from the trace, then separate name resolution, c
 | Cargo reports a mirror certificate error | The mirror endpoint, Cargo proxy route and Cargo CA trust |
 | Build succeeds but executable is missing | Target triple, profile and collection path |
 
-Apply the model in [P6.1 runner setup](../labs/p6-1-review-windows-runner-setup.md) and [P6.2 service-context diagnosis](../labs/p6-2-diagnose-windows-service-context.md).
+Apply the model in [P6.1 runner setup](../../labs/p6-1-review-windows-runner-setup.md) and [P6.2 service-context diagnosis](../../labs/p6-2-diagnose-windows-service-context.md).

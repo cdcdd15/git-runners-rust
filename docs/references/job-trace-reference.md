@@ -1,6 +1,6 @@
 # GitLab job trace reference · P0.B
 
-Use this reference after the [job lifecycle chapter](../concepts/job-lifecycle.md). It shows how to correlate effective configuration, a job graph and a runner trace before deciding which team owns a failure. All configuration and trace records below are illustrative and unexecuted.
+Use this reference after the [job lifecycle chapter](../knowledge/concepts/job-lifecycle.md). It shows how to correlate effective configuration, a job graph and a runner trace before deciding which team owns a failure. All configuration and trace records below are illustrative and unexecuted.
 
 ## Complete configuration · Push and merge request checks
 

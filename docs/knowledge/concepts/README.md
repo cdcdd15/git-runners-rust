@@ -1,5 +1,9 @@
 # Concepts and version checks
 
+- [SCA and SAST](sca-and-sast.md) explains dependency analysis, source security analysis and pipeline verdicts.
+
+- [CycloneDX and SBOM](cyclonedx-and-sbom.md) explains software inventories, Cargo inputs and dependency evaluation.
+
 - [GitLab job lifecycle for P0](job-lifecycle.md) explains event admission, scheduling, runner execution and failure boundaries.
 
 - [Foundations for P0–P5](foundations.md) defines the GitLab lifecycle, Rust ownership, Cargo resolution, job graphs, variable eligibility, and cache and artifact boundaries.

@@ -130,4 +130,4 @@ The example requests seven days of retention. Actual availability also depends o
 
 ## Acceptance
 
-Explain the exact producer, expected revision, transfer edge and retention evidence for each case. Show why the same-pipeline consumer works with an empty cache. Distinguish an artifact that was never uploaded, one that cannot be retrieved, and one that was retrieved from the wrong revision. Runtime practice remains in [Future labs](../../FUTURE-LABS.md).
+Explain the exact producer, expected revision, transfer edge and retention evidence for each case. Show why the same-pipeline consumer works with an empty cache. Distinguish an artifact that was never uploaded, one that cannot be retrieved, and one that was retrieved from the wrong revision. Runtime practice remains in [Future labs](../../future-labs.md).

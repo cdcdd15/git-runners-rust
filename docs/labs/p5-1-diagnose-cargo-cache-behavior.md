@@ -1,6 +1,6 @@
 # P5.1 · Diagnose Cargo cache behavior from traces
 
-**Access** — Offline. Allow 45–60 minutes. Start with [Cargo resolution and registry selection](p2-1-read-cargo-manifests-and-lockfile.md) and the [GitLab execution sequence](../architecture/README.md). The YAML, cache keys, runner names and traces below are illustrative and unexecuted.
+**Access** — Offline. Allow 45–60 minutes. Start with [Cargo resolution and registry selection](p2-1-read-cargo-manifests-and-lockfile.md) and the [GitLab execution sequence](../knowledge/lessons/P0-enterprise-cicd-architecture/README.md). The YAML, cache keys, runner names and traces below are illustrative and unexecuted.
 
 Ledger Gateway uses two Windows Shell runners. One job fetches dependency inputs, and a later job runs locked workspace tests. The team wants faster builds while preserving a successful cold path. A cache hit is evidence that Runner restored an archive for a key. Inspect what the job needed and what Cargo did before treating that hit as useful.
 
@@ -92,4 +92,4 @@ Key labels are shortened. Archive existence, cache location and Cargo output are
 
 ## Acceptance
 
-Distinguish an expected miss, a useful warm restore, a locality miss and a stale hit using the trace evidence. Explain what changes the proposed key, why the reader does not write, and how to preserve a reliable cold path. Continue with [P5.2](../roadmap/P5.md#p52--trace-artifacts-and-dependency-edges) for artifact provenance and transfer.
+Distinguish an expected miss, a useful warm restore, a locality miss and a stale hit using the trace evidence. Explain what changes the proposed key, why the reader does not write, and how to preserve a reliable cold path. Continue with [P5.2](../roadmap/p5.md#p52--trace-artifacts-and-dependency-edges) for artifact provenance and transfer.

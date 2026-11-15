@@ -104,4 +104,4 @@ A protected branch with the wrong environment fails the scope check. An unprotec
 
 ## Acceptance
 
-Predict all six access rows and explain which job, protection and scope checks control each outcome. Explain why visibility and file type cannot replace eligibility, name the settings owner for an inherited variable, and propose a safe check for a missing file without displaying its path or content. Runtime verification is tracked in [Future labs](../../FUTURE-LABS.md).
+Predict all six access rows and explain which job, protection and scope checks control each outcome. Explain why visibility and file type cannot replace eligibility, name the settings owner for an inherited variable, and propose a safe check for a missing file without displaying its path or content. Runtime verification is tracked in [Future labs](../../future-labs.md).

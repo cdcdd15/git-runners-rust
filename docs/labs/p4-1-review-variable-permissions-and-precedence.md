@@ -20,7 +20,7 @@ GitLab documents `developer`, `maintainer`, `owner` and `no_one_allowed` for the
 ## Decide when the value is needed
 
 1. **Configuration and graph creation.** Inputs are validated and interpolated into the configuration. Workflow and job rules evaluate using variables available at their respective evaluation points. A producer's runtime output is unavailable to those rules.
-2. **Prepare the job environment.** Identify definitions eligible for the ref, environment and job. Apply precedence among eligible sources. A protected or scoped value can be absent even though it has higher precedence on paper. [P4.2](../roadmap/P4.md#p42--review-secret-and-scope-boundaries) examines those eligibility boundaries.
+2. **Prepare the job environment.** Identify definitions eligible for the ref, environment and job. Apply precedence among eligible sources. A protected or scoped value can be absent even though it has higher precedence on paper. [P4.2](../roadmap/p4.md#p42--review-secret-and-scope-boundaries) examines those eligibility boundaries.
 3. **Shell execution.** PowerShell reads the resulting environment with `$env:LEDGER_LAB_MODE`. A shell assignment can change the value for subsequent commands in that shell. It cannot retroactively change the graph or propagate to a separate job by itself. A YAML value containing another variable reference is a separate expansion question. Check the keyword and expansion settings for the GitLab, Runner or shell layer that handles it. [Predefined variable availability](https://docs.gitlab.com/ci/variables/predefined_variables/), [variable expansion](https://docs.gitlab.com/ci/variables/where_variables_can_be_used/)
 
 ## Precedence review card
@@ -124,4 +124,4 @@ Assume the project belongs to `Platform / Ledger / Gateway`. The parent group de
 
 ## Acceptance
 
-Name the winning source and the evidence for each row. Identify who can review or change it, explain why dotenv cannot influence job creation, and distinguish a rejected override from an accepted value that loses precedence. [Future labs](../../FUTURE-LABS.md) track runtime verification separately.
+Name the winning source and the evidence for each row. Identify who can review or change it, explain why dotenv cannot influence job creation, and distinguish a rejected override from an accepted value that loses precedence. [Future labs](../../future-labs.md) track runtime verification separately.

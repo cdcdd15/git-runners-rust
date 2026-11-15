@@ -74,4 +74,4 @@ Assume a merge request changes the shared Serde requirement from `"1.0.219"` to 
 
 ## Acceptance
 
-Predict package selection, profile and artifact path from the command and assumptions. Explain which evidence separates a stale lockfile, a packaging dependency failure and a collection-path error. Identify which deliverable belongs to a Windows release and which belongs to a crate registry. Runtime practice is listed in [Future labs](../../FUTURE-LABS.md).
+Predict package selection, profile and artifact path from the command and assumptions. Explain which evidence separates a stale lockfile, a packaging dependency failure and a collection-path error. Identify which deliverable belongs to a Windows release and which belongs to a crate registry. Runtime practice is listed in [Future labs](../../future-labs.md).

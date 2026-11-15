@@ -1,6 +1,6 @@
 # L2 · Modify
 
-L2 starts with the ability to explain an existing pipeline from event to result. Given an approved business objective, prepare a reviewable configuration diff. Explain where each decision belongs, who owns it, which paths change and what could break. The Ledger Gateway examples are independent excerpts and are illustrative and unexecuted. Assume included templates are pinned and inspect their expanded jobs before adapting any example. [L1 baseline](01-L1-UNDERSTAND.md)
+L2 starts with the ability to explain an existing pipeline from event to result. Given an approved business objective, prepare a reviewable configuration diff. Explain where each decision belongs, who owns it, which paths change and what could break. The Ledger Gateway examples are independent excerpts and are illustrative and unexecuted. Assume included templates are pinned and inspect their expanded jobs before adapting any example. [L1 baseline](01-l1-understand.md)
 
 ## Work from request to impact
 
@@ -116,10 +116,10 @@ quality:
     - ./ci/quality.ps1
 ```
 
-GitLab Runner supplies the default source checkout. The existing script represents a repository-owned integration whose exit and gate behavior require review. The job rule replaces the Actions event filter at job scope. The credential should come from an approved protected project or group variable, with a compatible environment scope if configured. Confirm protection on the actual runner and branch. Apply the same event and credential review independently to Nexus IQ and Fortify. Preserve the IQ application and policy stage, and verify Fortify's supported scan mode and security verdict before preserving its release edge. [Vendor references](../concepts/README.md)
+GitLab Runner supplies the default source checkout. The existing script represents a repository-owned integration whose exit and gate behavior require review. The job rule replaces the Actions event filter at job scope. The credential should come from an approved protected project or group variable, with a compatible environment scope if configured. Confirm protection on the actual runner and branch. Apply the same event and credential review independently to Nexus IQ and Fortify. Preserve the IQ application and policy stage, and verify Fortify's supported scan mode and security verdict before preserving its release edge. [Vendor references](../knowledge/concepts/README.md)
 
 **Permissions and static checklist** — Obtain the appropriate settings owner for the secret and the normal merge approvals for YAML. Compare MR, fork, protected push and schedule outcomes. Check shell, checkout depth, vendor input paths and how the script surfaces gate failure versus service errors. Roll back the job definition and coordinate any settings rollback with the owner.
 
 ## Acceptance
 
-Submit all three diffs with change owners, expected side effects, event predictions and a rollback path. Explain which behavior is assumed and what evidence a reviewer would need. Continue with [L3](03-L3-TROUBLESHOOT.md) and the [rubric](04-SUMMARY-VALIDATION.md).
+Submit all three diffs with change owners, expected side effects, event predictions and a rollback path. Explain which behavior is assumed and what evidence a reviewer would need. Continue with [L3](03-l3-troubleshoot.md) and the [rubric](04-summary-validation.md).
