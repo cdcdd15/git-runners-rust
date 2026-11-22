@@ -2,70 +2,7 @@
 
 > Scope: Windows GitLab Runner with PowerShell shell executor. This study consolidates only the concepts, diagrams, comparison tables, and command examples discussed on 22 November 2026; it is not copied from earlier generated files.
 
-## Common Maven vs Rust baseline
-
-| Concept | Java / Maven | Rust / Cargo |
-|---|---|---|
-| Main executable on Windows | `mvn.cmd` | `cargo.exe` |
-| Compiler | `javac` | `rustc` |
-| Descriptor | `pom.xml` | `Cargo.toml` |
-| Dependency locking | No standard `Cargo.lock` equivalent; version management is usually in POMs/BOMs | `Cargo.lock` |
-| Dependency sources | Maven Central / enterprise Nexus | crates.io / enterprise registry mirror |
-| Build | `mvn package` | `cargo build --locked` |
-| Test | `mvn test` | `cargo test --locked` |
-| Extension model | Maven plugins and lifecycle goals | Cargo subcommands as separate executables |
-| Typical build output | `target/` | `target/` |
-
-Maven defines a configurable lifecycle (`validate → compile → test → package → verify → install → deploy`). Cargo has commands such as `build`, `test` and external subcommands rather than a directly equivalent Maven lifecycle. GitLab itself does not run either language: the Windows Shell runner starts **PowerShell**, which starts `mvn.cmd`, `cargo.exe`, scanner `.bat` launchers or `fcli.exe`.
-
-```mermaid
-flowchart TD
-  G[GitLab .gitlab-ci.yml] --> R[Windows GitLab Runner]
-  R --> P[PowerShell]
-  P --> M[mvn.cmd / Java workflow]
-  P --> C[cargo.exe / Rust workflow]
-  P --> S[sonar-scanner.bat]
-  P --> N[nexus-iq-cli.bat]
-  P --> F[fcli.exe]
-```
-
-## Reusable repository organization
-
-```text
-rust-project/
-├── .gitlab-ci.yml
-├── Cargo.toml
-├── Cargo.lock
-├── src/
-├── ci/
-│   ├── scripts/
-│   │   ├── common.ps1
-│   │   ├── build.ps1
-│   │   ├── test.ps1
-│   │   ├── sonar.ps1
-│   │   ├── nexus-iq.ps1
-│   │   └── fortify.ps1
-│   └── README.md
-└── docs/
-```
-
-The YAML declares **when and where** a job runs; the version-controlled `.ps1` file declares **how**. The `sonar.ps1`, `nexus-iq.ps1`, and `fortify.ps1` examples below are intentionally independent, so you can add jobs one at a time.
-
-### PowerShell syntax to know
-
-| Syntax | Meaning in CI |
-|---|---|
-| `& "C:\Tools\...\tool.bat"` | Call executable/launcher at a path containing spaces or special characters |
-| `$env:NAME` | Read an environment variable, including GitLab CI variables |
-| `` ` `` at end of line | PowerShell command continuation; no trailing spaces allowed |
-| `$LASTEXITCODE` | Exit code from the most recent native executable (e.g. Cargo, `.bat`, `fcli`) |
-| `if ($LASTEXITCODE -ne 0) { throw ... }` | Convert native tool failures into a failed CI job |
-| `$ErrorActionPreference = "Stop"` | Promote many PowerShell cmdlet errors to terminating errors; does **not** replace native exit-code checks |
-| `Join-Path`, `Test-Path` | Construct and check paths safely |
-| `try { ... } finally { ... }` | Perform cleanup even when a scan or command fails |
-
-A CI runner must have access to the tool executable and relevant service endpoints; a `.ps1` in the repository does **not** install an executable on the Windows host. Prefer exact tool paths or controlled PATH configuration, avoid putting credentials directly into source files, and test CI jobs with the runner's actual account.
-
+**Shared foundations:** See [Common Maven vs Rust baseline & reusable repository organization](00-common-maven-vs-rust-and-repository-organization.md) for the build-tool comparison, Windows runner process diagram, shared `ci/scripts/` directory structure, and PowerShell syntax.
 
 ## 1. Purpose and the CycloneDX analogy
 
